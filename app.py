@@ -12,7 +12,8 @@ from sklearn.metrics import mean_absolute_error
 st.title("Prediksi Harga Bitcoin Dengan Regresi Polynomial")
 
 st.sidebar.title("Navigation")
-app_mode = st.sidebar.selectbox("Pilih Menu", ["Eksplorasi Data", "Prediksi"])
+with st.sidebar :
+    page = option_menu ("Pilih Halaman", ["Home", "Data Understanding","Preprocessing", "Model", "Evaluasi","Testing"], default_index=0)
 
 if app_mode == "Eksplorasi Data":
     st.header("1. Eksplorasi Data")
