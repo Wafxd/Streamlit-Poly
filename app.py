@@ -14,7 +14,7 @@ st.title("Prediksi Harga Bitcoin Dengan Regresi Polynomial")
 
 st.sidebar.title("Navigation")
 with st.sidebar :
-    page = option_menu ("Pilih Halaman", ["Eksplorasi Data", "Prediksi"], default_index=0)
+    app_mode = option_menu ("Pilih Halaman", ["Eksplorasi Data", "Prediksi"], default_index=0)
 
 if app_mode == "Eksplorasi Data":
     st.header("1. Eksplorasi Data")
