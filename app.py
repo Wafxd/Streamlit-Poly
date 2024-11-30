@@ -4,6 +4,7 @@ import numpy as np
 import pickle
 import matplotlib.pyplot as plt
 import seaborn as sns
+from streamlit_option_menu import option_menu
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.preprocessing import PolynomialFeatures
 from sklearn.linear_model import LinearRegression
@@ -13,7 +14,7 @@ st.title("Prediksi Harga Bitcoin Dengan Regresi Polynomial")
 
 st.sidebar.title("Navigation")
 with st.sidebar :
-    page = option_menu ("Pilih Halaman", ["Home", "Data Understanding","Preprocessing", "Model", "Evaluasi","Testing"], default_index=0)
+    page = option_menu ("Pilih Halaman", ["Eksplorasi Data", "Prediksi"], default_index=0)
 
 if app_mode == "Eksplorasi Data":
     st.header("1. Eksplorasi Data")
